@@ -1,1 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2b2b; /* Couleur sombre */
+    color: #e0e0e0; /* Texte clair */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1a1a1a; /* Arrière-plan du header */
+    color: #ffa500; /* Texte orange */
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #333; /* Couleur de fond du contenu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; /* Coins arrondis */
+}
+
+.intro, .purchase {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffa500; /* Couleur orange pour les titres */
+}
+
+.canvas-preview {
+    border: 2px dashed #ffa500; /* Bordure pour la toile */
+    padding: 20px;
+    text-align: center;
+    min-height: 200px; /* Hauteur minimale pour la zone de toile */
+}
+
+button {
+    background-color: #ffa500; /* Couleur du bouton */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff8c00; /* Couleur au survol */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb; /* Couleur claire pour le footer */
+}
 
