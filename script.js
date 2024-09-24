@@ -1,15 +1,30 @@
 const colors = [
     '#FF0000', // Rouge
+    '#FF4D4D', // Rouge clair
+    '#B30000', // Rouge sombre
     '#FF7F00', // Orange
+    '#FFAA00', // Orange clair
+    '#B36D00', // Orange sombre
     '#FFFF00', // Jaune
+    '#FFFF4D', // Jaune clair
+    '#B3B300', // Jaune sombre
     '#7FFF00', // Vert
+    '#A8FF00', // Vert clair
+    '#4CAF50', // Vert sombre
     '#00FF00', // Vert clair
     '#00FFFF', // Cyan
+    '#00B2B2', // Cyan sombre
+    '#009999', // Cyan plus sombre
     '#0000FF', // Bleu
+    '#4D4DFF', // Bleu clair
+    '#0000B2', // Bleu sombre
     '#4B0082', // Indigo
-    '#9400D3'  // Violet
+    '#7A3E8E', // Indigo clair
+    '#320A56', // Indigo sombre
+    '#9400D3', // Violet
+    '#AA3D99', // Violet clair
+    '#5D004F'  // Violet sombre
 ];
-
 
 // Sélectionner la palette de couleurs
 const colorPalette = document.getElementById('color-palette');
