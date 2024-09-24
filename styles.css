@@ -1,88 +1,41 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #2b2b2b; /* Couleur sombre */
-    color: #e0e0e0; /* Texte clair */
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond claire */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1a1a1a; /* Arrière-plan du header */
-    color: #ffa500; /* Texte orange */
-    padding: 2rem;
-    text-align: center;
-}
-
-h1 {
-    margin: 0;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #333; /* Couleur de fond du contenu */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 8px; /* Coins arrondis */
-}
-
-.color-picker {
-    margin-bottom: 20px;
+    background-color: #333; /* Fond sombre */
+    color: white; /* Texte blanc */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centrer le texte */
 }
 
 #color-palette {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet aux couleurs de passer à la ligne */
+    margin: 10px; /* Marge autour de la palette */
 }
 
 .color {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px; /* Coins arrondis */
+    width: 40px; /* Largeur de chaque carré de couleur */
+    height: 40px; /* Hauteur de chaque carré de couleur */
+    margin: 5px; /* Espacement entre les couleurs */
+    border: 1px solid #ccc; /* Bordure pour les carrés de couleur */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
 }
 
 .color.selected {
-    border-color: #ffa500; /* Bordure orange pour la couleur sélectionnée */
+    border: 2px solid #000; /* Bordure pour indiquer la couleur sélectionnée */
 }
 
-.canvas-preview {
-    border: 2px dashed #ffa500; /* Bordure pour la toile */
-    padding: 20px;
-    text-align: center;
-    min-height: 300px; /* Hauteur minimale pour la zone de toile */
-    position: relative;
-    overflow: hidden; /* Empêche le débordement */
-}
-
-.canvas {
-    background-color: #ffffff; /* Couleur de fond de la toile */
-    position: relative;
-    width: 75vw;
-    height: 75vh;
-     border: 1px solid #000; /* Optionnel : pour avoir une bordure visible */
-    transform: scale(1); /* Scale initial */
-    transform-origin: top left; /* Origine du zoom */
-}
-
-button {
-    background-color: #ffa500; /* Couleur du bouton */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #ff8c00; /* Couleur au survol */
+canvas {
+    border: 1px solid #000; /* Bordure de la toile */
+    cursor: crosshair; /* Curseur de croix pour dessiner */
 }
 
 footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #bbb; /* Couleur claire pour le footer */
+    text-align: center; /* Centre le texte */
+    padding: 10px; /* Espacement intérieur */
 }
