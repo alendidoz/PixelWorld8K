@@ -95,6 +95,23 @@ canvas.addEventListener('click', (event) => {
     }
 });
 
+// Fonction pour enregistrer l'image
+const saveBtn = document.getElementById('save-btn');
+saveBtn.addEventListener('click', () => {
+    // Convertir le canvas en une URL de données
+    const dataURL = canvas.toDataURL('image/png');
+
+    // Créer un lien pour télécharger l'image
+    const link = document.createElement('a');
+    link.href = dataURL;
+    link.download = 'canvas-image.png'; // Nom du fichier téléchargé
+
+    // Simuler un clic sur le lien pour initier le téléchargement
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
 // Zoom fonction
 let scale = 1;
 canvas.addEventListener('wheel', (event) => {
