@@ -3,44 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vente de Pixels 8K</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+    <title>8K Pixel World</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Vente de Pixels sur Toile 8K</h1>
-        <p>Transformez vos idées en pixels sur notre toile en haute résolution.</p>
+        <h1>Bienvenue dans le Monde des Pixels 8K</h1>
+        <button id="fullscreen-btn">Plein Écran</button>
     </header>
 
-    <main>
-        <button id="fullscreen-btn">Plein écran</button>
-        
-        <section class="color-picker">
-            <h2>Choisissez votre couleur</h2>
-            <div id="color-palette">
-                <!-- Palette de couleurs -->
-            </div>
-        </section>
-
-        <section class="canvas-preview">
-            <h2>Aperçu de la Toile</h2>
-            <div class="canvas" id="canvas">
-                <!-- Zone pour afficher les pixels -->
-                <p>Toile en 8K sera affichée ici.</p>
-            </div>
-        </section>
-
-        <section class="purchase">
-            <h2>Achetez votre Pixel</h2>
-            <p>Positionnez votre pixel et confirmez l'achat !</p>
-            <button id="buy-pixel">Confirmer l'Achat</button>
-        </section>
-    </main>
+    <div id="color-palette"></div>
+    <canvas id="canvas"></canvas>
 
     <footer>
-        <p>&copy; 2024 Vente de Pixels 8K. Tous droits réservés.</p>
+        <p>&copy; 2024 8K Pixel World. Tous droits réservés.</p>
     </footer>
 
-    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
