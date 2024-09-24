@@ -26,6 +26,20 @@ const colors = [
     '#5D004F'  // Violet sombre
 ];
 
+// Récupère la référence de la toile
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Ajuster la taille de la toile
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Événement pour ajuster la taille de la toile lors du redimensionnement de la fenêtre
+window.addEventListener('resize', () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+
 // Sélectionner la palette de couleurs
 const colorPalette = document.getElementById('color-palette');
 colors.forEach(color => {
@@ -60,26 +74,18 @@ fullscreenBtn.addEventListener('click', () => {
     }
 });
 
-
 // Gestion de la toile
-const canvas = document.getElementById('canvas');
 canvas.addEventListener('click', (event) => {
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     
     if (selectedColor) {
-        const pixelDiv = document.createElement('div');
-        pixelDiv.style.position = 'absolute';
-        pixelDiv.style.width = '10px'; // Taille du pixel
-        pixelDiv.style.height = '10px';
-        pixelDiv.style.backgroundColor = selectedColor;
-        pixelDiv.style.left = `${x}px`;
-        pixelDiv.style.top = `${y}px`;
-
         const confirmPlacement = confirm("Confirmez-vous l'achat du pixel de couleur " + selectedColor + " ?");
         if (confirmPlacement) {
-            canvas.appendChild(pixelDiv);
+            // Dessine le pixel sur la toile
+            ctx.fillStyle = selectedColor;
+            ctx.fillRect(x, y, 10, 10); // Taille du pixel 10x10
             alert("Pixel placé avec succès !");
             // Simuler la sauvegarde
             console.log("Pixel enregistré avec la couleur: " + selectedColor + " à la position: (" + x + ", " + y + ")");
