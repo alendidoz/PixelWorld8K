@@ -19,9 +19,8 @@ header {
 }
 
 .color {
-    width: 40px; /* Largeur de chaque carré de couleur */
-    height: 40px; /* Hauteur de chaque carré de couleur */
-    margin: 5px; /* Espacement entre les couleurs */
+    width: 1px; /* Largeur de chaque carré de couleur */
+    height: 1px; /* Hauteur de chaque carré de couleur */
     border: 1px solid #ccc; /* Bordure pour les carrés de couleur */
     cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
 }
