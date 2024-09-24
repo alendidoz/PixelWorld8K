@@ -1,13 +1,15 @@
 const colors = [
-    '#FF0000', '#FF7F00', '#FFFF00', '#7FFF00', '#00FF00',
-    '#00FF7F', '#00FFFF', '#007FFF', '#0000FF', '#7F00FF',
-    '#FF00FF', '#FF007F', '#FFFFFF', '#000000', '#808080',
-    '#C0C0C0', '#FFD700', '#FF4500', '#FF1493', '#00FA9A',
-    '#8A2BE2', '#FF69B4', '#ADFF2F', '#B22222', '#5F9EA0',
-    '#FF6347', '#4682B4', '#D2691E', '#A52A2A', '#9932CC',
-    '#FF8C00', '#FFDAB9', '#FFE4E1', '#E6E6FA', '#FFF0F5',
-    '#F0E68C', '#FFD700', '#F5FFFA', '#FFF5EE', '#DDA0DD',
+    '#FF0000', // Rouge
+    '#FF7F00', // Orange
+    '#FFFF00', // Jaune
+    '#7FFF00', // Vert
+    '#00FF00', // Vert clair
+    '#00FFFF', // Cyan
+    '#0000FF', // Bleu
+    '#4B0082', // Indigo
+    '#9400D3'  // Violet
 ];
+
 
 // Sélectionner la palette de couleurs
 const colorPalette = document.getElementById('color-palette');
@@ -28,6 +30,21 @@ function selectColor(colorDiv) {
     colorDiv.classList.add('selected');
     selectedColor = colorDiv.style.backgroundColor;
 }
+
+// Fonction plein écran
+const fullscreenBtn = document.getElementById('fullscreen-btn');
+fullscreenBtn.addEventListener('click', () => {
+    if (canvas.requestFullscreen) {
+        canvas.requestFullscreen();
+    } else if (canvas.mozRequestFullScreen) { // Firefox
+        canvas.mozRequestFullScreen();
+    } else if (canvas.webkitRequestFullscreen) { // Chrome, Safari et Opera
+        canvas.webkitRequestFullscreen();
+    } else if (canvas.msRequestFullscreen) { // IE/Edge
+        canvas.msRequestFullscreen();
+    }
+});
+
 
 // Gestion de la toile
 const canvas = document.getElementById('canvas');
